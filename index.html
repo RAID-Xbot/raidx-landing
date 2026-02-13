@@ -15,21 +15,21 @@
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
         
         :root {
-            --bg-primary: #0a0e17;
-            --bg-secondary: #111827;
-            --bg-card: #151b2b;
-            --bg-card-hover: #1c2438;
-            --accent-cyan: #00d4ff;
-            --accent-blue: #3b82f6;
-            --accent-purple: #8b5cf6;
-            --accent-green: #10b981;
-            --accent-red: #ef4444;
-            --accent-yellow: #f59e0b;
-            --accent-gradient: linear-gradient(135deg, #00d4ff, #3b82f6, #8b5cf6);
-            --text-primary: #f1f5f9;
-            --text-secondary: #94a3b8;
-            --text-muted: #64748b;
-            --border-color: rgba(255,255,255,0.07);
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f8fafc;
+            --accent-cyan: #0891b2;
+            --accent-blue: #2563eb;
+            --accent-purple: #7c3aed;
+            --accent-green: #059669;
+            --accent-red: #dc2626;
+            --accent-yellow: #d97706;
+            --accent-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border-color: rgba(0,0,0,0.08);
         }
 
         html { scroll-behavior: smooth; font-size: 16px; }
@@ -48,8 +48,8 @@
             position: fixed; top: 0; left: 0;
             width: 100%; height: 100%;
             background-image: 
-                linear-gradient(rgba(0,212,255,0.02) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,212,255,0.02) 1px, transparent 1px);
+                linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
             background-size: 80px 80px;
             z-index: 0; pointer-events: none;
         }
@@ -76,7 +76,7 @@
             top: 0; left: 0; right: 0;
             z-index: 100;
             padding: 14px 0;
-            background: rgba(10,14,23,0.9);
+            background: rgba(255,255,255,0.92);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border-color);
         }
@@ -133,8 +133,8 @@
 
         /* ===== IMAGE PLACEHOLDER ===== */
         .img-placeholder {
-            background: linear-gradient(135deg, #1a2035 0%, #151b2b 100%);
-            border: 2px dashed rgba(0,212,255,0.2);
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border: 2px dashed rgba(0,0,0,0.1);
             border-radius: 16px;
             display: flex;
             flex-direction: column;
@@ -187,7 +187,7 @@
         .hero-bg-overlay {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(180deg, rgba(10,14,23,0.5) 0%, rgba(10,14,23,0.85) 60%, var(--bg-primary) 100%);
+            background: linear-gradient(180deg, rgba(255,255,255,0.5) 0%, rgba(255,255,255,0.85) 60%, var(--bg-primary) 100%);
             z-index: 1;
         }
         .hero .container { z-index: 2; }
@@ -205,8 +205,8 @@
             align-items: center;
             gap: 20px;
             padding: 10px 28px;
-            background: rgba(16,185,129,0.08);
-            border: 1px solid rgba(16,185,129,0.2);
+            background: rgba(5,150,105,0.06);
+            border: 1px solid rgba(5,150,105,0.15);
             border-radius: 60px;
             margin-bottom: 36px;
             animation: fadeInDown 1s ease;
@@ -260,7 +260,7 @@
         }
         .hero h1 .highlight-num {
             font-family: 'JetBrains Mono', monospace;
-            background: linear-gradient(135deg, #10b981, #00d4ff);
+            background: linear-gradient(135deg, #059669, #2563eb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -305,25 +305,26 @@
         .hero-proof-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             position: relative;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
         }
         .hero-proof-card .img-placeholder {
             width: 100%;
-            height: 200px;
+            height: 260px;
             border: none;
             border-radius: 0;
         }
         .hero-proof-card .proof-badge {
             position: absolute;
-            top: 12px; left: 12px;
-            padding: 5px 14px;
-            background: rgba(10,14,23,0.85);
+            top: 14px; left: 14px;
+            padding: 6px 16px;
+            background: rgba(255,255,255,0.92);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(16,185,129,0.3);
+            border: 1px solid rgba(5,150,105,0.2);
             border-radius: 50px;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 700;
             color: var(--accent-green);
             z-index: 2;
@@ -360,8 +361,8 @@
             align-items: center;
             gap: 6px;
             padding: 16px 32px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.12);
+            background: rgba(0,0,0,0.02);
+            border: 1px solid rgba(0,0,0,0.12);
             border-radius: 60px;
             color: var(--text-secondary);
             font-size: 15px;
@@ -372,9 +373,9 @@
             font-family: 'Noto Sans KR', sans-serif;
         }
         .btn-ghost:hover {
-            border-color: var(--accent-cyan);
-            color: var(--accent-cyan);
-            background: rgba(0,212,255,0.05);
+            border-color: var(--accent-blue);
+            color: var(--accent-blue);
+            background: rgba(37,99,235,0.04);
         }
 
         /* ===== SECTION COMMON ===== */
@@ -383,12 +384,12 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            padding: 5px 14px;
-            background: rgba(0,212,255,0.08);
-            border: 1px solid rgba(0,212,255,0.12);
+            padding: 6px 16px;
+            background: rgba(37,99,235,0.06);
+            border: 1px solid rgba(37,99,235,0.12);
             border-radius: 50px;
             font-size: 11px;
-            color: var(--accent-cyan);
+            color: var(--accent-blue);
             font-weight: 600;
             letter-spacing: 1.5px;
             text-transform: uppercase;
@@ -418,14 +419,15 @@
             align-items: stretch;
         }
         .pain-card {
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             border: 1px solid var(--border-color);
             background: var(--bg-card);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
         }
         .pain-card .card-image {
             width: 100%;
-            height: 220px;
+            height: 280px;
         }
         .pain-card .card-image .img-placeholder {
             width: 100%; height: 100%;
@@ -433,7 +435,7 @@
             border: none;
         }
         .pain-card .card-body {
-            padding: 28px 24px;
+            padding: 36px 28px;
         }
         .pain-card h3 {
             font-size: 20px;
@@ -459,14 +461,15 @@
         .program-section { text-align: center; }
         .program-screenshot {
             margin-top: 60px;
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             border: 1px solid var(--border-color);
             background: var(--bg-card);
+            box-shadow: 0 8px 40px rgba(0,0,0,0.06);
         }
         .program-screenshot .img-placeholder {
             width: 100%;
-            height: 500px;
+            height: 560px;
             border: none;
             border-radius: 0;
         }
@@ -504,25 +507,26 @@
         .strategy-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
         }
         .strategy-card:hover {
-            border-color: rgba(0,212,255,0.15);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-color: rgba(37,99,235,0.15);
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
         }
         .strategy-card .card-chart {
             width: 100%;
-            height: 240px;
+            height: 300px;
         }
         .strategy-card .card-chart .img-placeholder {
             width: 100%; height: 100%;
             border: none; border-radius: 0;
         }
         .strategy-card .card-body {
-            padding: 28px 24px;
+            padding: 36px 28px;
             text-align: left;
         }
         .strategy-card .card-body h3 {
@@ -567,19 +571,20 @@
             margin-top: 60px;
         }
         .profit-card {
-            border-radius: 16px;
+            border-radius: 20px;
             overflow: hidden;
             border: 1px solid var(--border-color);
             background: var(--bg-card);
             transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
         }
         .profit-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
         }
         .profit-card .img-placeholder {
             width: 100%;
-            height: 280px;
+            height: 320px;
             border: none; border-radius: 0;
         }
         .profit-card .profit-label {
@@ -595,7 +600,7 @@
             border-radius: 20px;
             font-size: 12px;
             font-weight: 600;
-            background: rgba(16,185,129,0.12);
+            background: rgba(5,150,105,0.08);
             color: var(--accent-green);
         }
 
@@ -610,14 +615,16 @@
         .review-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 18px;
-            padding: 32px 24px;
+            border-radius: 22px;
+            padding: 36px 28px;
             text-align: left;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
         }
         .review-card:hover {
-            border-color: rgba(0,212,255,0.12);
-            transform: translateY(-3px);
+            border-color: rgba(37,99,235,0.12);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
         }
         .review-header {
             display: flex;
@@ -670,7 +677,7 @@
         /* ===== YOUTUBE LIVE ===== */
         .youtube-section {
             text-align: center;
-            background: linear-gradient(180deg, var(--bg-primary) 0%, rgba(17,24,39,0.5) 50%, var(--bg-primary) 100%);
+            background: linear-gradient(180deg, var(--bg-primary) 0%, #f1f5f9 50%, var(--bg-primary) 100%);
         }
         .youtube-layout {
             margin-top: 60px;
@@ -680,14 +687,15 @@
             align-items: center;
         }
         .youtube-thumbnail {
-            border-radius: 20px;
+            border-radius: 24px;
             overflow: hidden;
             border: 1px solid var(--border-color);
             position: relative;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
         }
         .youtube-thumbnail .img-placeholder {
             width: 100%;
-            height: 360px;
+            height: 400px;
             border: none; border-radius: 0;
         }
         .youtube-play-btn {
@@ -783,7 +791,7 @@
             top: 50%; left: 50%;
             transform: translate(-50%, -50%);
             width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(0,212,255,0.04) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(37,99,235,0.04) 0%, transparent 70%);
             pointer-events: none;
         }
         .team-story-intro {
@@ -813,35 +821,36 @@
         }
         .team-connector .connector-line {
             width: 2px; height: 60px;
-            background: linear-gradient(180deg, rgba(0,212,255,0.3), rgba(139,92,246,0.3));
+            background: linear-gradient(180deg, rgba(37,99,235,0.2), rgba(124,58,237,0.2));
         }
         .team-connector .connector-icon {
             width: 52px; height: 52px;
-            background: linear-gradient(135deg, rgba(0,212,255,0.15), rgba(139,92,246,0.15));
-            border: 1px solid rgba(0,212,255,0.2);
+            background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(124,58,237,0.08));
+            border: 1px solid rgba(37,99,235,0.15);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             font-size: 22px;
             animation: pulse-connector 2s ease-in-out infinite;
         }
         @keyframes pulse-connector {
-            0%, 100% { box-shadow: 0 0 20px rgba(0,212,255,0.1); }
-            50% { box-shadow: 0 0 35px rgba(0,212,255,0.25); }
+            0%, 100% { box-shadow: 0 0 20px rgba(37,99,235,0.06); }
+            50% { box-shadow: 0 0 35px rgba(37,99,235,0.12); }
         }
 
         .team-card {
             background: var(--bg-card);
             border: 1px solid var(--border-color);
             border-radius: 24px;
-            padding: 40px 28px 36px;
+            padding: 44px 32px 40px;
             text-align: center;
             position: relative;
             overflow: hidden;
             transition: all 0.4s ease;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
         }
         .team-card:hover {
             transform: translateY(-6px);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.1);
         }
         .team-card::before {
             content: ''; position: absolute;
@@ -856,8 +865,8 @@
             width: 200px; height: 200px;
             border-radius: 50%; opacity: 0.07; pointer-events: none;
         }
-        .team-card.dev .team-card-glow { background: radial-gradient(circle, #00d4ff, transparent); }
-        .team-card.trader .team-card-glow { background: radial-gradient(circle, #8b5cf6, transparent); }
+        .team-card.dev .team-card-glow { background: radial-gradient(circle, #2563eb, transparent); }
+        .team-card.trader .team-card-glow { background: radial-gradient(circle, #7c3aed, transparent); }
 
         .team-avatar {
             width: 110px; height: 110px;
@@ -867,12 +876,12 @@
             position: relative; z-index: 1;
         }
         .team-card.dev .team-avatar {
-            border: 3px solid rgba(0,212,255,0.3);
-            box-shadow: 0 0 30px rgba(0,212,255,0.15);
+            border: 3px solid rgba(37,99,235,0.25);
+            box-shadow: 0 0 30px rgba(37,99,235,0.08);
         }
         .team-card.trader .team-avatar {
-            border: 3px solid rgba(139,92,246,0.3);
-            box-shadow: 0 0 30px rgba(139,92,246,0.15);
+            border: 3px solid rgba(124,58,237,0.25);
+            box-shadow: 0 0 30px rgba(124,58,237,0.08);
         }
         .team-avatar .img-placeholder {
             width: 100%; height: 100%;
@@ -885,19 +894,19 @@
             font-size: 11px; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 10px;
         }
         .team-card.dev .team-role-badge {
-            background: rgba(0,212,255,0.1); color: var(--accent-cyan);
-            border: 1px solid rgba(0,212,255,0.15);
+            background: rgba(37,99,235,0.06); color: var(--accent-blue);
+            border: 1px solid rgba(37,99,235,0.12);
         }
         .team-card.trader .team-role-badge {
-            background: rgba(139,92,246,0.1); color: var(--accent-purple);
-            border: 1px solid rgba(139,92,246,0.15);
+            background: rgba(124,58,237,0.06); color: var(--accent-purple);
+            border: 1px solid rgba(124,58,237,0.12);
         }
 
         .team-name {
             font-family: 'JetBrains Mono', monospace;
             font-size: 22px; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 4px;
         }
-        .team-card.dev .team-name { color: var(--accent-cyan); }
+        .team-card.dev .team-name { color: var(--accent-blue); }
         .team-card.trader .team-name { color: var(--accent-purple); }
 
         .team-title { font-size: 14px; color: var(--text-secondary); font-weight: 600; margin-bottom: 20px; }
@@ -909,17 +918,17 @@
         .team-skills li {
             display: flex; align-items: center; gap: 10px;
             font-size: 13px; color: var(--text-secondary);
-            padding: 8px 14px; background: rgba(255,255,255,0.02);
-            border-radius: 10px; border: 1px solid rgba(255,255,255,0.04);
+            padding: 10px 16px; background: #f8fafc;
+            border-radius: 10px; border: 1px solid rgba(0,0,0,0.05);
         }
         .team-skills li .skill-icon { font-size: 16px; min-width: 20px; text-align: center; }
 
         .team-quote {
             max-width: 700px; margin: 0 auto;
-            padding: 32px 40px;
-            background: linear-gradient(135deg, rgba(0,212,255,0.04), rgba(139,92,246,0.04));
-            border: 1px solid rgba(0,212,255,0.08);
-            border-radius: 16px; position: relative;
+            padding: 36px 44px;
+            background: linear-gradient(135deg, rgba(37,99,235,0.03), rgba(124,58,237,0.03));
+            border: 1px solid rgba(37,99,235,0.08);
+            border-radius: 20px; position: relative;
         }
         .team-quote::before {
             content: '"'; position: absolute; top: 10px; left: 20px;
@@ -931,81 +940,7 @@
         .team-quote p { font-size: 16px; color: var(--text-secondary); line-height: 1.8; font-style: italic; }
         .team-quote .quote-author { margin-top: 12px; font-size: 13px; color: var(--text-muted); font-style: normal; font-weight: 600; }
 
-        /* ===== FEATURES ===== */
-        .features-section { text-align: center; }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            margin-top: 60px;
-        }
-        .feature-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 28px 20px;
-            text-align: left;
-            transition: all 0.3s ease;
-        }
-        .feature-card:hover {
-            border-color: rgba(0,212,255,0.12);
-            transform: translateY(-2px);
-        }
-        .feature-icon { font-size: 28px; margin-bottom: 14px; }
-        .feature-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
-        .feature-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-        /* ===== FAQ ===== */
-        .faq-section { text-align: center; }
-        .faq-list {
-            max-width: 700px;
-            margin: 60px auto 0;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            overflow: hidden;
-            text-align: left;
-        }
-        .faq-question {
-            padding: 18px 22px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            transition: all 0.3s ease;
-            user-select: none;
-        }
-        .faq-question:hover { color: var(--accent-cyan); }
-        .faq-question .arrow {
-            font-size: 18px;
-            transition: transform 0.3s ease;
-            color: var(--text-muted);
-        }
-        .faq-item.active .faq-question .arrow {
-            transform: rotate(45deg);
-            color: var(--accent-cyan);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.4s ease;
-        }
-        .faq-item.active .faq-answer {
-            max-height: 300px;
-            padding: 0 22px 18px;
-        }
-        .faq-answer p {
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.7;
-        }
 
         /* ===== FINAL CTA ===== */
         .final-cta {
@@ -1013,10 +948,10 @@
             padding: 100px 0 120px;
         }
         .cta-box {
-            background: linear-gradient(135deg, rgba(0,212,255,0.06), rgba(139,92,246,0.06));
-            border: 1px solid rgba(0,212,255,0.1);
-            border-radius: 24px;
-            padding: 70px 40px;
+            background: linear-gradient(135deg, rgba(37,99,235,0.03), rgba(124,58,237,0.03));
+            border: 1px solid rgba(37,99,235,0.08);
+            border-radius: 28px;
+            padding: 80px 48px;
         }
         .cta-box h2 {
             font-size: clamp(26px, 4.5vw, 38px);
@@ -1039,16 +974,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 14px;
-            padding: 32px 20px;
-            background: rgba(255,255,255,0.03);
+            gap: 16px;
+            padding: 40px 28px;
+            background: var(--bg-card);
             border: 1px solid var(--border-color);
-            border-radius: 18px;
+            border-radius: 22px;
             text-decoration: none;
             transition: all 0.4s ease;
             cursor: pointer;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.05);
         }
         .cta-card::before {
             content: '';
@@ -1060,14 +996,13 @@
         .cta-card.tele-channel::before { background: linear-gradient(90deg, #0088cc, #00b4ff); }
         .cta-card.tele-cs::before { background: linear-gradient(90deg, #8b5cf6, #a78bfa); }
         .cta-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 16px 50px rgba(0,0,0,0.35);
-            border-color: rgba(255,255,255,0.12);
-            background: rgba(255,255,255,0.06);
+            transform: translateY(-6px);
+            box-shadow: 0 16px 50px rgba(0,0,0,0.1);
+            border-color: rgba(0,0,0,0.1);
         }
         .cta-card-icon {
-            width: 56px; height: 56px;
-            border-radius: 16px;
+            width: 64px; height: 64px;
+            border-radius: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1076,8 +1011,8 @@
         .cta-card.kakao .cta-card-icon { background: rgba(254,229,0,0.1); }
         .cta-card.tele-channel .cta-card-icon { background: rgba(0,136,204,0.1); }
         .cta-card.tele-cs .cta-card-icon { background: rgba(139,92,246,0.1); }
-        .cta-card-title { font-size: 17px; font-weight: 700; color: var(--text-primary); }
-        .cta-card-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+        .cta-card-title { font-size: 19px; font-weight: 700; color: var(--text-primary); }
+        .cta-card-desc { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
         .cta-card-btn {
             display: inline-flex;
             align-items: center;
@@ -1152,7 +1087,6 @@
             .team-name { font-size: 20px; }
             .team-quote { padding: 24px 20px; }
             .team-quote::before { font-size: 36px; top: 6px; left: 12px; }
-            .features-grid { grid-template-columns: 1fr; }
             .cta-cards { grid-template-columns: 1fr; max-width: 360px; margin-left: auto; margin-right: auto; }
             .cta-box { padding: 40px 20px; }
             .btn-primary { width: 100%; justify-content: center; padding: 14px 28px; font-size: 15px; }
@@ -1164,7 +1098,7 @@
             position: fixed;
             bottom: 0; left: 0; right: 0;
             padding: 10px 16px;
-            background: rgba(10,14,23,0.95);
+            background: rgba(255,255,255,0.95);
             backdrop-filter: blur(20px);
             border-top: 1px solid var(--border-color);
             z-index: 99;
@@ -1556,14 +1490,14 @@
             </p>
 
             <div class="youtube-layout reveal">
-                <div class="youtube-thumbnail">
+                <a href="https://www.youtube.com/@%EB%A0%88%EC%9D%B4%EB%93%9C%EB%B4%87/streams" target="_blank" class="youtube-thumbnail" style="display:block;text-decoration:none;">
                     <div class="img-placeholder">
                         <video autoplay muted loop playsinline>
                             <source src="images/youtube-thumb.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="youtube-play-btn"></div>
-                </div>
+                </a>
                 <div class="youtube-info">
                     <div class="live-badge">
                         <span class="dot"></span>
@@ -1574,7 +1508,7 @@
                         RAID-X의 자동매매 과정을 유튜브 라이브로 공개합니다.
                         실시간으로 진입, 청산, 손절이 이루어지는 모습을 직접 확인해보세요.
                     </p>
-                    <a href="https://youtube.com" target="_blank" class="btn-youtube">
+                    <a href="https://www.youtube.com/@%EB%A0%88%EC%9D%B4%EB%93%9C%EB%B4%87/streams" target="_blank" class="btn-youtube">
                         ▶ 라이브 방송 바로보기
                     </a>
                 </div>
@@ -1664,102 +1598,7 @@
         </div>
     </section>
 
-    <!-- ===== 9. FEATURES ===== -->
-    <section class="features-section">
-        <div class="container">
-            <span class="section-label">FEATURES</span>
-            <h2 class="section-title">핵심 기능</h2>
 
-            <div class="features-grid reveal">
-                <div class="feature-card">
-                    <div class="feature-icon">🤖</div>
-                    <h4>완전 자동 매매</h4>
-                    <p>시그널 감지부터 진입, 익절, 손절까지 모든 과정이 자동 실행</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h4>감정 배제 트레이딩</h4>
-                    <p>공포와 탐욕을 제거. 오직 데이터와 규칙만으로 매매</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h4>실시간 대시보드</h4>
-                    <p>TradingView 차트, 포지션 현황, 전적을 한눈에 확인</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔔</div>
-                    <h4>Discord 실시간 알림</h4>
-                    <p>진입/청산/손절 모든 매매 내역이 실시간 알림</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h4>출금불가 API 보안</h4>
-                    <p>거래 권한만 사용, API 키 로컬 암호화 저장</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h4>자동 복구 시스템</h4>
-                    <p>프로그램 오류 시 자동 재시작 및 포지션 복구</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== 10. FAQ ===== -->
-    <section class="faq-section">
-        <div class="container">
-            <span class="section-label">FAQ</span>
-            <h2 class="section-title">자주 묻는 질문</h2>
-
-            <div class="faq-list reveal">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>자동매매봇이 정말 안전한가요?</span>
-                        <span class="arrow">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>RAID-X는 거래소 API 중 <strong>출금 권한을 사용하지 않습니다.</strong> 거래 권한만 사용하므로 자금 유출 위험이 없습니다. 또한 하드 손절(1.5%), 손절 잠금, 쿨다운 시스템 등 다중 안전장치로 리스크를 관리합니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>최소 투자금은 얼마인가요?</span>
-                        <span class="arrow">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>제한은 없지만, 안정적인 봇 운영을 위해 <strong>최소 100 USDT 이상</strong>을 권장합니다. 소액으로 테스트 후 점차 늘려가시는 것을 추천드립니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>컴퓨터를 24시간 켜놔야 하나요?</span>
-                        <span class="arrow">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>네, 자동매매를 위해 프로그램이 실행 중이어야 합니다. 가정용 PC나 소형 서버를 사용하시면 됩니다. 자동 재시작 기능이 내장되어 있습니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>수익은 보장되나요?</span>
-                        <span class="arrow">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>암호화폐 선물 거래는 <strong>원금 손실 위험</strong>이 있으며, 과거 수익이 미래를 보장하지 않습니다. RAID-X는 리스크를 최소화하는 시스템이지, 수익을 보장하는 프로그램이 아닙니다.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFaq(this)">
-                        <span>설치가 어렵지 않나요?</span>
-                        <span class="arrow">+</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>전혀 어렵지 않습니다. Windows에서 설치 파일 실행 후 API 키만 입력하면 끝입니다. 막히시면 <strong>1:1 원격 설치 지원</strong>도 제공합니다.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ===== 11. FINAL CTA ===== -->
     <section class="final-cta">
@@ -1820,14 +1659,6 @@
             });
         }, { threshold: 0.1 });
         revealElements.forEach(el => revealObserver.observe(el));
-
-        // FAQ Toggle
-        function toggleFaq(element) {
-            const item = element.parentElement;
-            const isActive = item.classList.contains('active');
-            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-            if (!isActive) item.classList.add('active');
-        }
 
         // Floating CTA
         const floatingCta = document.getElementById('floatingCta');
