@@ -760,6 +760,57 @@
             margin-top: 6px;
             line-height: 1.5;
         }
+        .patent-banner {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 28px;
+            padding: 28px 40px;
+            background: linear-gradient(135deg, rgba(17,24,39,0.7), rgba(30,41,59,0.5));
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .patent-logo {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+        .patent-info {
+            text-align: left;
+        }
+        .patent-info .patent-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .patent-info .patent-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.5;
+        }
+        .patent-info .patent-number {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            font-family: 'SF Mono', 'Consolas', monospace;
+        }
+        @media (max-width: 600px) {
+            .patent-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 16px;
+                padding: 24px 20px;
+            }
+            .patent-info { text-align: center; }
+        }
 
         /* ===== STRATEGY ===== */
         .strategy-section { text-align: center; }
@@ -1657,40 +1708,42 @@
     <section class="pain-section">
         <div class="container">
             <span class="section-label">WHY RAID-X</span>
-            <h2 class="section-title">이런 경험, 있지 않으세요?</h2>
+            <h2 class="section-title">레이드봇은 이런 게 다릅니다</h2>
 
             <div class="pain-grid reveal">
                 <div class="pain-card problem">
                     <div class="card-image">
                         <div class="img-placeholder">
-                            <img src="images/pain-before.jpg" alt="수동 매매의 한계 - 지친 트레이더">
+                            <img src="images/pain-before.jpg" alt="시중 자동매매 프로그램의 문제점">
                         </div>
                     </div>
                     <div class="card-body">
-                    <h3>수동 매매의 한계</h3>
+                    <h3>시중 자동매매의 문제점</h3>
                         <ul>
-                            <li>밤새 차트 보다가 놓친 진입 타이밍</li>
-                        <li>공포에 손절, 탐욕에 물타기 반복</li>
-                        <li>감정적 매매로 계좌 바닥</li>
-                        <li>본업에 집중할 수 없는 피로감</li>
-                    </ul>
+                            <li>과도한 거래횟수로 수수료만 쌓이는 구조</li>
+                            <li>50배~100배 고레버리지로 청산 위험 상시 노출</li>
+                            <li>체결 지연(슬리피지)으로 실제 수익과 백테스트 괴리</li>
+                            <li>손실 시 반복적 물타기로 계좌 전체 위험</li>
+                            <li>검증되지 않은 전략, 과최적화된 백테스트 결과</li>
+                        </ul>
                     </div>
                 </div>
 
                 <div class="pain-card solution">
                     <div class="card-image">
                         <div class="img-placeholder">
-                            <img src="images/pain-after.jpg" alt="RAID-X 해결책 - 여유로운 자동매매">
+                            <img src="images/pain-after.jpg" alt="RAID-X 자동매매의 차별점">
                         </div>
                     </div>
                     <div class="card-body">
-                    <h3>RAID-X의 해결책</h3>
+                    <h3>RAID-X는 다릅니다</h3>
                         <ul>
-                        <li>24시간 무인 자동매매, 놓치는 시그널 없음</li>
-                        <li>규칙 기반 매매로 감정 완전 배제</li>
-                        <li>자동 손절/익절로 리스크 관리</li>
-                        <li>설치 후 방치, 본업에 집중</li>
-                    </ul>
+                            <li>꼭 필요한 타점만 공략, 불필요한 매매 최소화</li>
+                            <li>안정적인 10배~20배 레버리지로 리스크 관리</li>
+                            <li>거래소 직접 연동, 빠른 체결속도로 슬리피지 최소화</li>
+                            <li>자동 손절/익절로 계좌 보호, 물타기 없는 원칙 매매</li>
+                            <li>실시간 검증된 전략, 투명한 거래 내역 공개</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -1698,6 +1751,8 @@
     </section>
 
     <div class="glass-divider"></div>
+
+    <!-- ===== 2.5 PATENT NOTICE (within program section below) ===== -->
 
     <!-- ===== 3. PROGRAM SCREENSHOT ===== -->
     <section class="program-section">
@@ -1729,6 +1784,15 @@
                         <div class="num">📡</div>
                         <div class="label">텔레그램 알림<br>실시간 리포트</div>
                     </div>
+                </div>
+            </div>
+
+            <div class="patent-banner reveal">
+                <img src="images/patent-kipo-logo.png" alt="대한민국 특허청" class="patent-logo">
+                <div class="patent-info">
+                    <div class="patent-label">특허청 특허 출원</div>
+                    <div class="patent-title">지능형 포지션 관리 시스템 기술이 적용된 레이드봇</div>
+                    <div class="patent-number">특허 출원번호 2025-0132177</div>
                 </div>
             </div>
         </div>
